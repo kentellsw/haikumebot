@@ -12,19 +12,16 @@ import logging
 import warnings
 from pprint import pprint
 from wordnik import *
+from secrets import *
 import re
 
 warnings.filterwarnings("ignore")
-consumer_key = "v2UbzgNJvBUQYqa2OOLU7ynSU"
-consumer_secret = "Vaz2avzakDcx2NsueH2oUzUhRuXRFO9UrZTLRy0zb2qJqWa8cm"
-access_token = "597020272-9Q7XIfnzx9NNzfro4uDUtE1PDz3SFcF6q62WxosQ"
-access_token_secret = "sUoRPyjCwmuPl795FV9MYm1xCPiYle0TscLN9AZcXtia8"
 apiUrl = 'http://api.wordnik.com/v4'
-apiKey = '991beecd60e328b63010507cfe805eeebe915efc004f1fea3'
+apiKey = WordnikapiKey
 client = swagger.ApiClient(apiKey, apiUrl)
 
-auth_handler = OAuthHandler(consumer_key, consumer_secret)
-auth_handler.set_access_token(access_token, access_token_secret)
+auth_handler = OAuthHandler(C_KEY, C_SECRET)
+auth_handler.set_access_token(A_TOKEN, A_TOKEN_SECRET)
 
 twitter_client = API(auth_handler)
  
