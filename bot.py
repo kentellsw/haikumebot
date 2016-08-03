@@ -207,7 +207,7 @@ class PyStreamListener(StreamListener):
                 print('%s: %s ||Count:%s' %(linenum,line,l))
             else:
                 print('Oops we need a smaller word than %s which has %s vowels' %(word,v))
-                word, v = self.getrand(1,3)
+                word, v = self.getrand(4,4)
                 line = line +' '+ word
                 l=l+v
                 print('%s has %s vowels' %(word,v))
